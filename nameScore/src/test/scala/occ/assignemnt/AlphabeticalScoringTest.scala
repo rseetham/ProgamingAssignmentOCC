@@ -1,3 +1,5 @@
+package occ.assignemnt
+
 import org.scalatest.funspec.AnyFunSpec
 import org.scalatest.matchers.should.Matchers
 

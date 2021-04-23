@@ -1,3 +1,5 @@
+package occ.assignemnt
+
 trait Scoring {
   def calculateScore(name: String, position: Int): Int
 }
@@ -14,5 +16,3 @@ object AlphabeticalScoring extends Scoring {
     } * position
   }
 }
-
-

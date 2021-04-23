@@ -1,9 +1,9 @@
-import ComputeScoreApp.args
+package occ.assignemnt
 
 import java.nio.file.{Files, Paths}
 import scala.io.Source
 
-object ComputeScoreApp extends App{
+object ComputeScoreApp extends App {
   override def main(args: Array[String]): Unit = {
     require(args.length == 1, "Needs a file containing names to run")
     require(Files.exists(Paths.get(args(0))), "Given input file path does not exist")
@@ -21,7 +21,7 @@ object ComputeScoreApp extends App{
 
   def scoreFirstNames(names: Seq[String]): Int = {
     val scoreComputer = AlphabeticalScoring
-    names.sorted.zipWithIndex.foldLeft(0){
+    names.sorted.zipWithIndex.foldLeft(0) {
       case (scoreSoFar, (name, index)) => scoreSoFar + scoreComputer.calculateScore(name, index + 1)
     }
   }
